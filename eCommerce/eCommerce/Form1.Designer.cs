@@ -28,12 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            pictureBox1 = new PictureBox();
+            Rimozione = new Button();
+            Aggiunta = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(409, 135);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(261, 203);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // Rimozione
+            // 
+            Rimozione.BackColor = Color.Red;
+            Rimozione.Location = new Point(153, 255);
+            Rimozione.Name = "Rimozione";
+            Rimozione.Size = new Size(114, 83);
+            Rimozione.TabIndex = 1;
+            Rimozione.Text = "RIMUOVI";
+            Rimozione.UseVisualStyleBackColor = false;
+            Rimozione.Click += Rimozione_Click;
+            // 
+            // Aggiunta
+            // 
+            Aggiunta.BackColor = Color.LimeGreen;
+            Aggiunta.Location = new Point(153, 135);
+            Aggiunta.Name = "Aggiunta";
+            Aggiunta.Size = new Size(114, 83);
+            Aggiunta.TabIndex = 2;
+            Aggiunta.Text = "AGGIUNGI";
+            Aggiunta.UseVisualStyleBackColor = false;
+            Aggiunta.Click += Aggiunta_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(Aggiunta);
+            Controls.Add(Rimozione);
+            Controls.Add(pictureBox1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private PictureBox pictureBox1;
+        private Button Rimozione;
+        private Button Aggiunta;
     }
 }
