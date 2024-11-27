@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            pictureBox1 = new PictureBox();
             Rimozione = new Button();
             Aggiunta = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ListBoxCarrello = new ListBox();
+            label1 = new Label();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(409, 135);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(261, 203);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // Rimozione
             // 
@@ -66,19 +56,39 @@
             Aggiunta.UseVisualStyleBackColor = false;
             Aggiunta.Click += Aggiunta_Click;
             // 
+            // ListBoxCarrello
+            // 
+            ListBoxCarrello.FormattingEnabled = true;
+            ListBoxCarrello.ItemHeight = 15;
+            ListBoxCarrello.Location = new Point(428, 164);
+            ListBoxCarrello.Name = "ListBoxCarrello";
+            ListBoxCarrello.Size = new Size(181, 139);
+            ListBoxCarrello.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(428, 116);
+            label1.Name = "label1";
+            label1.Size = new Size(184, 45);
+            label1.TabIndex = 4;
+            label1.Text = "CARRELLO";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(ListBoxCarrello);
             Controls.Add(Aggiunta);
             Controls.Add(Rimozione);
-            Controls.Add(pictureBox1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -86,5 +96,7 @@
         private PictureBox pictureBox1;
         private Button Rimozione;
         private Button Aggiunta;
+        private ListBox ListBoxCarrello;
+        private Label label1;
     }
 }

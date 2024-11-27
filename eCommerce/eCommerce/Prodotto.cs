@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eCommerce
 {
-    class Prodotto /*: IEquatable<Prodotto>*/
+    class Prodotto : IEquatable<Prodotto>
     {
         private string marca;
         private string modello;
@@ -38,7 +38,7 @@ namespace eCommerce
             this.identificativo = identificativo;
             this.prezzo = prezzo;
         }
-        /*public bool Equals(Prodotto other)
+        public bool Equals(Prodotto other)
         {
             if (other == null)
                 return false;
@@ -47,7 +47,7 @@ namespace eCommerce
                 return true;
 
             return Identificativo.Equals(other.Identificativo);
-        }*/
+        }
 
     }
 
