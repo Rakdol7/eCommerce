@@ -39,6 +39,11 @@
             prodotti.Clear();
         }
 
+        public void rimuoviUltimo(int posizione)
+        {
+           prodotti.RemoveAt(posizione);
+        }
+
         public Carrello(string identificativo)
         {
             this.identificativo = identificativo;
