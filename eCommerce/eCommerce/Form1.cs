@@ -4,9 +4,9 @@ namespace eCommerce
     {
         private Carrello c1;
         private Prodotto p1;
-        private Prodotto p2;
+        //private Prodotto p2;
         int conta = 0;
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +21,12 @@ namespace eCommerce
 
         private void Aggiunta_Click(object sender, EventArgs e)
         {
+            p1 = new Prodotto(textBox2.Text , textBox1.Text , Convert.ToString(conta + 11111), 69.99);
+
+            c1.aggiungiProdotto(p1);
+            conta++;
+            AggiornaInterfaccia();
+            /*
             bool uguale = false;
             if (textBox1.Text != "")
             {
@@ -48,12 +54,12 @@ namespace eCommerce
                         AggiornaInterfaccia();
                     }
                 }
-            }
+            }*/
         }
 
         private void Rimozione_Click(object sender, EventArgs e)
         {
-            c1.rimuoviUltimo(conta-1);
+            c1.rimuoviUltimo(conta - 1);
             conta--;
             AggiornaInterfaccia();
         }
@@ -62,7 +68,7 @@ namespace eCommerce
         {
             ListBoxCarrello.DataSource = null;
             ListBoxCarrello.DataSource = c1.Prodotti;
-            ListBoxCarrello.DisplayMember = "Identificativo";
+            ListBoxCarrello.DisplayMember = "Modello";
         }
 
         private void Svuota_Click(object sender, EventArgs e)
@@ -73,7 +79,12 @@ namespace eCommerce
 
         private void label2_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
