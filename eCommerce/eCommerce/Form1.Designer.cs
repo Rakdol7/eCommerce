@@ -33,18 +33,16 @@
             ListBoxCarrello = new ListBox();
             label1 = new Label();
             Svuota = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            label3 = new Label();
+            comboBox1 = new ComboBox();
+            Salva = new Button();
             SuspendLayout();
             // 
             // Rimozione
             // 
             Rimozione.BackColor = Color.Red;
-            Rimozione.Location = new Point(567, 317);
+            Rimozione.Location = new Point(312, 181);
             Rimozione.Name = "Rimozione";
-            Rimozione.Size = new Size(114, 83);
+            Rimozione.Size = new Size(120, 83);
             Rimozione.TabIndex = 1;
             Rimozione.Text = "RIMUOVI";
             Rimozione.UseVisualStyleBackColor = false;
@@ -53,9 +51,9 @@
             // Aggiunta
             // 
             Aggiunta.BackColor = Color.LimeGreen;
-            Aggiunta.Location = new Point(205, 167);
+            Aggiunta.Location = new Point(186, 181);
             Aggiunta.Name = "Aggiunta";
-            Aggiunta.Size = new Size(114, 83);
+            Aggiunta.Size = new Size(120, 83);
             Aggiunta.TabIndex = 2;
             Aggiunta.Text = "AGGIUNGI";
             Aggiunta.UseVisualStyleBackColor = false;
@@ -65,7 +63,7 @@
             // 
             ListBoxCarrello.FormattingEnabled = true;
             ListBoxCarrello.ItemHeight = 15;
-            ListBoxCarrello.Location = new Point(479, 172);
+            ListBoxCarrello.Location = new Point(557, 177);
             ListBoxCarrello.Name = "ListBoxCarrello";
             ListBoxCarrello.Size = new Size(181, 139);
             ListBoxCarrello.TabIndex = 3;
@@ -74,7 +72,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(476, 124);
+            label1.Location = new Point(554, 129);
             label1.Name = "label1";
             label1.Size = new Size(184, 45);
             label1.TabIndex = 4;
@@ -84,7 +82,7 @@
             // 
             Svuota.BackColor = Color.Black;
             Svuota.ForeColor = Color.White;
-            Svuota.Location = new Point(447, 317);
+            Svuota.Location = new Point(251, 270);
             Svuota.Name = "Svuota";
             Svuota.Size = new Size(114, 83);
             Svuota.TabIndex = 5;
@@ -92,50 +90,34 @@
             Svuota.UseVisualStyleBackColor = false;
             Svuota.Click += Svuota_Click;
             // 
-            // textBox1
+            // comboBox1
             // 
-            textBox1.Location = new Point(85, 172);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(114, 23);
-            textBox1.TabIndex = 6;
-            textBox1.TextAlign = HorizontalAlignment.Center;
-            textBox1.TextChanged += textBox1_TextChanged;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "FC25", "The Legend of Zelda", "Doom", "WWE2K25", "Assassin's Creed" });
+            comboBox1.Location = new Point(241, 152);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(141, 23);
+            comboBox1.TabIndex = 6;
             // 
-            // textBox2
+            // Salva
             // 
-            textBox2.Location = new Point(85, 219);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(114, 23);
-            textBox2.TabIndex = 7;
-            textBox2.TextAlign = HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(85, 201);
-            label2.Name = "label2";
-            label2.Size = new Size(43, 15);
-            label2.TabIndex = 8;
-            label2.Text = "Marca:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(85, 154);
-            label3.Name = "label3";
-            label3.Size = new Size(54, 15);
-            label3.TabIndex = 9;
-            label3.Text = "Modello:";
+            Salva.BackColor = Color.Turquoise;
+            Salva.ForeColor = Color.Black;
+            Salva.Location = new Point(595, 338);
+            Salva.Name = "Salva";
+            Salva.Size = new Size(97, 46);
+            Salva.TabIndex = 7;
+            Salva.Text = "SALVA";
+            Salva.UseVisualStyleBackColor = false;
+            Salva.Click += Salva_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(Salva);
+            Controls.Add(comboBox1);
             Controls.Add(Svuota);
             Controls.Add(label1);
             Controls.Add(ListBoxCarrello);
@@ -156,9 +138,7 @@
         private ListBox ListBoxCarrello;
         private Label label1;
         private Button Svuota;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label2;
-        private Label label3;
+        private ComboBox comboBox1;
+        private Button Salva;
     }
 }
