@@ -98,9 +98,12 @@ namespace eCommerce
 
         private void Rimozione_Click(object sender, EventArgs e)
         {
-            c1.rimuoviUltimo(conta - 1);
-            conta--;
-            AggiornaInterfaccia();
+            if (conta != 0)
+            {
+                c1.rimuoviUltimo(conta - 1);
+                conta--;
+                AggiornaInterfaccia();
+            }
         }
 
         private void AggiornaInterfaccia()
